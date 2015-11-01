@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('entranceApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, socket, $location) {
+    $location.path('/entrance');
+
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
